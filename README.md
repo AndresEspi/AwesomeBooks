@@ -11,10 +11,10 @@
   - [Setup](#setup)
   - [Install](#install)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [🔭 Future Features](#future-features)
 - [📝 License](#license)
 
 
