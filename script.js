@@ -6,7 +6,15 @@ const listSection = document.querySelector('.list-section');
 
 // Obtener la colección de libros almacenada en localStorage o crear una nueva si no existe
 let booksCollection = JSON.parse(localStorage.getItem('booksCollection')) || [];
-
+// Agregar dos libros iniciales a la colección
+if (booksCollection.length === 0) {
+  const initialBooks = [
+    { title: 'Book 1', author: 'Author 1' },
+    { title: 'Book 2', author: 'Author 2' }
+  ];
+  booksCollection = initialBooks;
+  saveCollectionToLocalStorage();
+}
 // Función para remover un libro de la colección
 const removeBook = (index) => {
   booksCollection = booksCollection.filter((book, i) => i !== index);
