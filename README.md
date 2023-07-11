@@ -14,6 +14,7 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [🔭 Future Features](#future-features)
 - [📝 License](#license)
 
 
@@ -151,6 +152,12 @@ I would like to thank .....
 - **My coding partners**
 - **My morning session teammates**
 - **My Standup session teammates**
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- **Add animation for the project**
+- **Add the editing functionality**
+- **Add the test for the project**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
