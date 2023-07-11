@@ -8,19 +8,19 @@ const listSection = document.querySelector('.list-section');
 let booksCollection = JSON.parse(localStorage.getItem('booksCollection')) || [];
 
 // Función para remover un libro de la colección
-function removeBook(index) {
+const removeBook = (index) => {
   booksCollection = booksCollection.filter((book, i) => i !== index);
   renderBooks();
   saveCollectionToLocalStorage();
-}
+};
 
 // Función para guardar la colección de libros en localStorage
-function saveCollectionToLocalStorage() {
+const saveCollectionToLocalStorage = () => {
   localStorage.setItem('booksCollection', JSON.stringify(booksCollection));
-}
+};
 
 // Función para renderizar la colección de libros en la página
-function renderBooks() {
+const renderBooks = () => {
   listSection.innerHTML = ''; // Limpiar la lista antes de renderizar los libros
 
   // Recorrer la colección de libros y crear elementos <li> para cada uno
@@ -49,19 +49,19 @@ function renderBooks() {
     // Agregar el elemento <li> a la lista
     listSection.appendChild(listItem);
   });
-}
+};
 
 // Función para agregar un nuevo libro a la colección
-function addBook(title, author) {
+const addBook = (title, author) => {
   const newBook = {
     title,
-    author
+    author,
   };
 
   booksCollection.push(newBook);
   renderBooks();
   saveCollectionToLocalStorage();
-}
+};
 
 // Renderizar los libros al cargar la página
 renderBooks();
