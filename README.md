@@ -18,9 +18,9 @@
 
 
 
-# 📖 Capstone Proyect (OtakuZone) <a name="about-project"></a>
+# 📖 Awesome Books Proyect<a name="Awesome Books"></a>
 
-**In this final project I show what I learned during the first module of the program.** 
+**In this project I show what I learned during the first day in the second module** 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -35,15 +35,15 @@
 ### Key Futures <a name="key-futures"></a>
 
 - **The pertinent corrections requested by the reviewer will be added**
-- **New award-winning anime**
-- **More anime characters**
+- **More animation**
+- **better structure**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [See Live Demo](https://andresespi.github.io/animePage/)
+- [See Live Demo](https://andresespi.github.io/AwesomeBooks/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -67,7 +67,7 @@ Navigate to the directory where you want to clone the repository. You can use th
 
 Run the following command to clone the repository:
 
-- **git clone https://github.com/AndresEspi/animePage.git**
+- **git clone https://github.com/AndresEspi/AwesomeBooks .**
 
 This command will create a new directory called "animePage" and download the files from the repository into it.
 
@@ -104,13 +104,25 @@ The deployment of the project will depend on your needs and the implementation p
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## 👥 Authors <a name="AndresEspi"></a>
+## 👥 Authors <a name="AndresEspi-CarlosZ96-78fatemanazari"></a>
 
-👤 **Author1**
+👤 **AndresEspi**
 
 - GitHub: [@githubhandle](https://github.com/AndresEspi)
 - Twitter: [@twitterhandle](https://twitter.com/Andres_Esp1nosa)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/andres-espinosa-3bba67271/)
+
+👤 **CarlosZ96**
+
+- GitHub: [@githubhandle](https://github.com/CarlosZ96)
+- Twitter: [@twitterhandle](https://twitter.com/ELZambrano2)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)
+
+👤 **78fatemanazari**
+
+- GitHub: [@githubhandle](https://github.com/78fatemanazari)
+- Twitter: [@twitterhandle](https://twitter.com/fati_nazari78?s=31)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/78fatemanazari)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,7 +130,7 @@ The deployment of the project will depend on your needs and the implementation p
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/AndresEspi/animePage/issues).
+Feel free to check the [issues page](https://github.com/AndresEspi/AwesomeBooks/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,7 +151,6 @@ I would like to thank .....
 - **My coding partners**
 - **My morning session teammates**
 - **My Standup session teammates**
-- **Cindy Shin, whose design inspired this project.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
