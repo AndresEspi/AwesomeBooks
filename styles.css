@@ -3,9 +3,11 @@
 ::after {
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Comic Neue', cursive;
 }
+
 .list {
   display: flex;
   flex-direction: column;
@@ -16,6 +18,7 @@ body {
   padding: 1rem 0;
   font-family: 'Comic Neue', cursive;
 }
+
 h1 {
   display: flex;
   justify-content: center;
@@ -23,26 +26,31 @@ h1 {
   font-family: 'Comic Neue', cursive;
   font-weight: 700;
 }
+
 h2 {
   font-size: 40px;
   font-family: 'Comic Neue', cursive;
   font-weight: 700;
 }
+
 .add_new {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .add_new form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
 }
+
 .add_new form div {
   display: flex;
   flex-direction: column;
 }
+
 .bookList {
   display: flex;
   width: 100%;
@@ -51,11 +59,13 @@ h2 {
   margin: 0;
   padding: 10px;
 }
+
 .lineBook {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
 .removeBtn {
   border-right: 5px solid black;
   border-bottom: 5px solid black;
@@ -63,6 +73,7 @@ h2 {
   border-left: 2px solid black;
   border-radius: 2px;
 }
+
 .btn {
   border-right: 5px solid black;
   border-bottom: 5px solid black;
@@ -74,6 +85,7 @@ h2 {
   margin-left: 143px;
   justify-content: center;
 }
+
 input {
   border-right: 2px solid black;
   border-bottom: 2px solid black;
@@ -81,6 +93,7 @@ input {
   border-left: 4px solid black;
   border-radius: 2px;
 }
+
 .line {
   background-color: black;
   padding: 1px;
