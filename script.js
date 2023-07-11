@@ -42,8 +42,8 @@ function renderBooks() {
 // Función para agregar un nuevo libro a la colección
 function addBook(title, author) {
   const newBook = {
-    title: title,
-    author: author
+    title,
+    author
   };
 
   booksCollection.push(newBook);
@@ -63,6 +63,9 @@ function saveCollectionToLocalStorage() {
   localStorage.setItem('booksCollection', JSON.stringify(booksCollection));
 }
 
+// Renderizar los libros al cargar la página
+renderBooks();
+
 // Agregar listener para el evento "submit" del formulario
 form.addEventListener('submit', (e) => {
   e.preventDefault(); // Prevenir el envío del formulario
@@ -76,6 +79,3 @@ form.addEventListener('submit', (e) => {
   titleInput.value = '';
   authorInput.value = '';
 });
-
-// Renderizar los libros al cargar la página
-renderBooks();
