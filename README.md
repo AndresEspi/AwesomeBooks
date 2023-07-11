@@ -125,6 +125,12 @@ The deployment of the project will depend on your needs and the implementation p
 - Twitter: [@twitterhandle](https://twitter.com/fati_nazari78?s=31)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/78fatemanazari)
 
+## 🔭 Future Features <a name="future-features"></a>
+
+- **Add animation for the project**
+- **Add the editing functionality**
+- **Add the test for the project**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -152,12 +158,6 @@ I would like to thank .....
 - **My coding partners**
 - **My morning session teammates**
 - **My Standup session teammates**
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- **Add animation for the project**
-- **Add the editing functionality**
-- **Add the test for the project**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
