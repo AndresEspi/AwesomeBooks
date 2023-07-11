@@ -1,4 +1,4 @@
-/* eslint-disable rule-you-want-to-disable */
+
 
 // Obtener referencia a los elementos del DOM
 const form = document.querySelector('form');
