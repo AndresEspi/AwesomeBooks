@@ -1,92 +1,81 @@
 /* eslint-disable */
-// Obtener referencia a los elementos del DOM
 const form = document.querySelector('form');
-const titleInput = document.querySelector('input[placeholder="Title"]');
-const authorInput = document.querySelector('input[placeholder="Author"]');
-const listSection = document.querySelector('.list-section');
+const bookList = document.getElementById('bookList');
+const menua = document.querySelector('.menua');
+const menub = document.querySelector('.menub');
+const menuc = document.querySelector('.menuc');
+const main = document.querySelector('.list');
+const add = document.querySelector('.add_new');
+const contact = document.querySelector('.contact');
+const books = [];
 
-// Obtener la colección de libros almacenada en localStorage o crear una nueva si no existe
-let booksCollection = JSON.parse(localStorage.getItem('booksCollection')) || [];
+class Abooks {
+  constructor(books) {
+    this.books = books;
+    this.local = () => {
+      if (localStorage.getItem('books')) {
+        books = JSON.parse(localStorage.getItem('books'));
+      }
+    };
 
-// Agregar dos libros iniciales a la colección
-if (booksCollection.length === 0) {
-  const initialBooks = [
-    { title: 'Book 1', author: 'Author 1' },
-    { title: 'Book 2', author: 'Author 2' }
-  ];
-  booksCollection = initialBooks;
-  saveCollectionToLocalStorage();
+    this.displayBooks = () => {
+      if (localStorage.getItem('books')) {
+        books = JSON.parse(localStorage.getItem('books'));
+      }
+      bookList.className = 'bookList';
+      bookList.innerHTML = '';
+      books.forEach((book, index) => {
+        const li = document.createElement('li');
+        li.className = 'lineBook';
+        li.innerHTML = ` " ${book.title} " by ${book.author} <button class="removeBtn" data-index="${index}">Remove</button>`;
+        bookList.appendChild(li);
+      });
+    };
+
+    this.submitbtn = () => {
+      const title = document.getElementById('bookTitle').value;
+      const author = document.getElementById('authorName').value;
+      const newBook = { title, author };
+      books.push(newBook);
+      localStorage.setItem('books', JSON.stringify(books));
+      form.reset();
+    };
+  }
 }
 
-// Función para renderizar la colección de libros en la página
-function renderBooks() {
-  listSection.innerHTML = ''; // Limpiar la lista antes de renderizar los libros
+const Abooksa = new Abooks(books);
+Abooksa.local();
+Abooksa.displayBooks();
 
-  // Recorrer la colección de libros y crear elementos <li> para cada uno
-  booksCollection.forEach((book, index) => {
-    const listItem = document.createElement('li');
-
-    // Crear elementos <span> para el título y el autor y agregar saltos de línea entre ellos
-    const titleSpan = document.createElement('span');
-    titleSpan.textContent = book.title;
-    listItem.appendChild(titleSpan);
-
-    const authorSpan = document.createElement('span');
-    authorSpan.textContent = book.author;
-    listItem.appendChild(authorSpan);
-
-    // Crear botón de eliminar y agregar un listener para remover el libro correspondiente
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'Remove';
-    removeButton.addEventListener('click', () => {
-      removeBook(index);
-    });
-
-    // Agregar el botón de eliminar al elemento <li>
-    listItem.appendChild(removeButton);
-
-    // Agregar el elemento <li> a la lista
-    listSection.appendChild(listItem);
-  });
-}
-
-// Función para agregar un nuevo libro a la colección
-function addBook(title, author) {
-  const newBook = {
-    title: title,
-    author: author
-  };
-
-  booksCollection.push(newBook);
-  renderBooks();
-  saveCollectionToLocalStorage();
-}
-
-// Función para remover un libro de la colección
-function removeBook(index) {
-  booksCollection = booksCollection.filter((book, i) => i !== index);
-  renderBooks();
-  saveCollectionToLocalStorage();
-}
-
-// Función para guardar la colección de libros en localStorage
-function saveCollectionToLocalStorage() {
-  localStorage.setItem('booksCollection', JSON.stringify(booksCollection));
-}
-
-// Agregar listener para el evento "submit" del formulario
 form.addEventListener('submit', (e) => {
-  e.preventDefault(); // Prevenir el envío del formulario
-
-  const title = titleInput.value;
-  const author = authorInput.value;
-
-  addBook(title, author);
-
-  // Limpiar los campos del formulario después de agregar el libro
-  titleInput.value = '';
-  authorInput.value = '';
+  e.preventDefault();
+  const Abooksa = new Abooks(books);
+  Abooksa.submitbtn();
+  Abooksa.displayBooks();
 });
 
-// Renderizar los libros al cargar la página
-renderBooks();
+bookList.addEventListener('click', (event) => {
+  if (event.target.classList.contains('removeBtn')) {
+    const { index } = event.target.dataset;
+    books.splice(index, 1);
+    localStorage.setItem('books', JSON.stringify(books));
+    Abooksa.displayBooks();
+  }
+});
+Abooksa.displayBooks();
+
+menua.addEventListener('click', () => {
+  main.classList.toggle('hide');
+  add.classList.add('hide');
+  contact.classList.add('hide');
+});
+menub.addEventListener('click', () => {
+  add.classList.toggle('hide');
+  main.classList.add('hide');
+  contact.classList.add('hide');
+});
+menuc.addEventListener('click', () => {
+  contact.classList.toggle('hide');
+  main.classList.add('hide');
+  add.classList.add('hide');
+});
