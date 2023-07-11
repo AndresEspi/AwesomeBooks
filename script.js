@@ -4,11 +4,14 @@ const titleInput = document.querySelector('input[placeholder="Title"]');
 const authorInput = document.querySelector('input[placeholder="Author"]');
 const listSection = document.querySelector('.list-section');
 
+// Obtener la colección de libros almacenada en localStorage o crear una nueva si no existe
+let booksCollection = JSON.parse(localStorage.getItem('booksCollection')) || [];
+
 // Función para remover un libro de la colección
 const removeBook = (index) => {
   booksCollection = booksCollection.filter((book, i) => i !== index);
-  saveCollectionToLocalStorage();
   renderBooks();
+  saveCollectionToLocalStorage();
 };
 
 // Función para guardar la colección de libros en localStorage
@@ -56,12 +59,9 @@ const addBook = (title, author) => {
   };
 
   booksCollection.push(newBook);
-  saveCollectionToLocalStorage();
   renderBooks();
+  saveCollectionToLocalStorage();
 };
-
-// Obtener la colección de libros almacenada en localStorage o crear una nueva si no existe
-let booksCollection = JSON.parse(localStorage.getItem('booksCollection')) || [];
 
 // Renderizar los libros al cargar la página
 renderBooks();
