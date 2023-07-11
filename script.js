@@ -7,40 +7,37 @@ const listSection = document.querySelector('.list-section');
 // Obtener la colección de libros almacenada en localStorage o crear una nueva si no existe
 let booksCollection = JSON.parse(localStorage.getItem('booksCollection')) || [];
 
-
-
 // Función para renderizar la colección de libros en la página
 function renderBooks() {
-    listSection.innerHTML = ''; // Limpiar la lista antes de renderizar los libros
-  
-    // Recorrer la colección de libros y crear elementos <li> para cada uno
-    booksCollection.forEach((book, index) => {
-      const listItem = document.createElement('li');
-      
-      // Crear elementos <span> para el título y el autor y agregar saltos de línea entre ellos
-      const titleSpan = document.createElement('span');
-      titleSpan.textContent = book.title;
-      listItem.appendChild(titleSpan);
-  
-      const authorSpan = document.createElement('span');
-      authorSpan.textContent = book.author;
-      listItem.appendChild(authorSpan);
-  
-      // Crear botón de eliminar y agregar un listener para remover el libro correspondiente
-      const removeButton = document.createElement('button');
-      removeButton.textContent = 'Remove';
-      removeButton.addEventListener('click', () => {
-        removeBook(index);
-      });
-  
-      // Agregar el botón de eliminar al elemento <li>
-      listItem.appendChild(removeButton);
-  
-      // Agregar el elemento <li> a la lista
-      listSection.appendChild(listItem);
+  listSection.innerHTML = ''; // Limpiar la lista antes de renderizar los libros
+
+  // Recorrer la colección de libros y crear elementos <li> para cada uno
+  booksCollection.forEach((book, index) => {
+    const listItem = document.createElement('li');
+
+    // Crear elementos <span> para el título y el autor y agregar saltos de línea entre ellos
+    const titleSpan = document.createElement('span');
+    titleSpan.textContent = book.title;
+    listItem.appendChild(titleSpan);
+
+    const authorSpan = document.createElement('span');
+    authorSpan.textContent = book.author;
+    listItem.appendChild(authorSpan);
+
+    // Crear botón de eliminar y agregar un listener para remover el libro correspondiente
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.addEventListener('click', () => {
+      removeBook(index);
     });
-  }
-  
+
+    // Agregar el botón de eliminar al elemento <li>
+    listItem.appendChild(removeButton);
+
+    // Agregar el elemento <li> a la lista
+    listSection.appendChild(listItem);
+  });
+}
 
 // Función para agregar un nuevo libro a la colección
 function addBook(title, author) {
