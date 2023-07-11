@@ -7,7 +7,7 @@ const menuc = document.querySelector('.menuc');
 const main = document.querySelector('.list');
 const add = document.querySelector('.add_new');
 const contact = document.querySelector('.contact');
-let books = [];
+const books = [];
 
 class Abooks {
   constructor(books) {
