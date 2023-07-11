@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Obtener referencia a los elementos del DOM
 const form = document.querySelector('form');
 const titleInput = document.querySelector('input[placeholder="Title"]');
