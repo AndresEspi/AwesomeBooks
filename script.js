@@ -7,6 +7,7 @@ const listSection = document.querySelector('.list-section');
 
 // Obtener la colección de libros almacenada en localStorage o crear una nueva si no existe
 let booksCollection = JSON.parse(localStorage.getItem('booksCollection')) || [];
+
 // Agregar dos libros iniciales a la colección
 if (booksCollection.length === 0) {
   const initialBooks = [
@@ -16,20 +17,9 @@ if (booksCollection.length === 0) {
   booksCollection = initialBooks;
   saveCollectionToLocalStorage();
 }
-// Función para remover un libro de la colección
-const removeBook = (index) => {
-  booksCollection = booksCollection.filter((book, i) => i !== index);
-  renderBooks();
-  saveCollectionToLocalStorage();
-};
-
-// Función para guardar la colección de libros en localStorage
-const saveCollectionToLocalStorage = () => {
-  localStorage.setItem('booksCollection', JSON.stringify(booksCollection));
-};
 
 // Función para renderizar la colección de libros en la página
-const renderBooks = () => {
+function renderBooks() {
   listSection.innerHTML = ''; // Limpiar la lista antes de renderizar los libros
 
   // Recorrer la colección de libros y crear elementos <li> para cada uno
@@ -58,22 +48,31 @@ const renderBooks = () => {
     // Agregar el elemento <li> a la lista
     listSection.appendChild(listItem);
   });
-};
+}
 
 // Función para agregar un nuevo libro a la colección
-const addBook = (title, author) => {
+function addBook(title, author) {
   const newBook = {
-    title,
-    author,
+    title: title,
+    author: author
   };
 
   booksCollection.push(newBook);
   renderBooks();
   saveCollectionToLocalStorage();
-};
+}
 
-// Renderizar los libros al cargar la página
-renderBooks();
+// Función para remover un libro de la colección
+function removeBook(index) {
+  booksCollection = booksCollection.filter((book, i) => i !== index);
+  renderBooks();
+  saveCollectionToLocalStorage();
+}
+
+// Función para guardar la colección de libros en localStorage
+function saveCollectionToLocalStorage() {
+  localStorage.setItem('booksCollection', JSON.stringify(booksCollection));
+}
 
 // Agregar listener para el evento "submit" del formulario
 form.addEventListener('submit', (e) => {
@@ -88,3 +87,6 @@ form.addEventListener('submit', (e) => {
   titleInput.value = '';
   authorInput.value = '';
 });
+
+// Renderizar los libros al cargar la página
+renderBooks();
