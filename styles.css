@@ -18,7 +18,7 @@ button {
   background-color: black;
 }
 
-.cont h1{
+.cont h1 {
   font-family: 'Comic Neue', cursive;
   text-align: center;
 }
@@ -53,9 +53,9 @@ button {
 }
 
 .form1 span {
-  text-align: center; 
   font-size: 25px;
   font-weight: 600;
+  text-align: center;
 }
 
 .form1 label {
