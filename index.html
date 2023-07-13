@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    
-    <title>All Awesome books</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>All Awesome books</title>
 </head>
 <body>
-    <div class="container">
-        <section class="cont">
-            <h1>All Awesome books</h1>
-            <ul class="list-section"></ul>
-        </section>
-        <hr>
-        <section class="form">
-            <form class="form1">
-                <span>Add a new book</span>
-                <label>
-                    <input placeholder="Title" required>
-                </label>
-                <label>
-                    <input placeholder="Author" required>
-                </label>
-                <div class="button1">
-                    <button>Add</button>
-                </div>       
-            </form>
-        </section>
+  <section class="toolbar">
+    <div class="toolbar1">
+      <p>Awesome Books</p>
+      <ul class="options">
+        <li>
+          <a href="#cont">List</a>
+        </li>
+        <li>
+          <a href="#form">Add new</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
     </div>
+    <div id="fecha-hora"></div>
+  </section>
+  <section class="container">
+    <section class="cont">
+      <h1>All Awesome books</h1>
+      <ul class="list-section"></ul>
+    </section>
+    <section class="form">
+      <form class="form1">
+        <span>Add a new book</span>
+        <label>
+          <input placeholder="Title" required>
+        </label>
+        <label>
+          <input placeholder="Author" required>
+        </label>
+        <div class="button1">
+          <button>Add</button>
+        </div>
+      </form>
+    </section>
+    <section class="contact">
+      <h2>Contact information</h2>
+      <p>do have any questions or just want to say "Hello"? <br>You can reach out to us!</p>
+      <ul>
+        <li>Our e-mail: mail@mail.com</li>
+        <li>Our phone number: 03040290000234</li>
+        <li>Our address: Streetname 22, 8874 City, Country</li>
+      </ul>
+    </section>
+  </section>
+  <footer>
+    <p>Copyright - Andres Espinosa, 2023</p>
+  </footer>
 </body>
 <script src="script.js"></script>
 
