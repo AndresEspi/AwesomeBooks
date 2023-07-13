@@ -62,7 +62,7 @@ button {
 }
 
 .cont {
-  margin: 38.7vh 0;
+  margin: 33vh 0;
 }
 
 .cont h1 {
@@ -89,7 +89,7 @@ button {
   font-family: 'Comic Neue', cursive;
   display: flex;
   justify-content: space-around;
-  margin: 35.3vh 0;
+  margin: 32vh 0;
 }
 
 .form1 {
@@ -134,14 +134,16 @@ button {
   align-items: center;
   font-family: 'Comic Neue', cursive;
   font-weight: 600;
-  margin: 33.1vh 0;
+  margin: 30vh 0;
 }
 
 .contact h2 {
   font-size: 29px;
 }
 
-
+.hidden {
+  display: none;
+}
 
 footer {
   display: flex;
