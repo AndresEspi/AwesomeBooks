@@ -14,24 +14,24 @@
       <p>Awesome Books</p>
       <ul class="options">
         <li>
-          <a href="#cont">List</a>
+          <a href="#" onclick="mostrarSeccion('cont')">List</a>
         </li>
         <li>
-          <a href="#form">Add new</a>
+          <a href="#" onclick="mostrarSeccion('form')">Add new</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#" onclick="mostrarSeccion('contact')">Contact</a>
         </li>
       </ul>
     </div>
     <div id="fecha-hora"></div>
   </section>
   <section class="container">
-    <section class="cont">
+    <section id="cont" class="cont section">
       <h1>All Awesome books</h1>
       <ul class="list-section"></ul>
     </section>
-    <section class="form">
+    <section id="form" class="form section hidden">
       <form class="form1">
         <span>Add a new book</span>
         <label>
@@ -45,9 +45,9 @@
         </div>
       </form>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact section hidden">
       <h2>Contact information</h2>
-      <p>do have any questions or just want to say "Hello"? <br>You can reach out to us!</p>
+      <p>Do you have any questions or just want to say "Hello"?<br>You can reach out to us!</p>
       <ul>
         <li>Our e-mail: mail@mail.com</li>
         <li>Our phone number: 03040290000234</li>

@@ -125,4 +125,3 @@ function obtenerSufijoDia(dia) {
 // Actualizar la fecha y hora cada segundo
 setInterval(mostrarFechaHora, 1000);
 
-const options = document.querySelectorAll('.options a');
