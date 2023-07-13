@@ -2,7 +2,7 @@
   "name": "animepage",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "script.js",
   "dependencies": {
     "abab": "^2.0.6",
     "abbrev": "^1.1.1",

@@ -11,6 +11,7 @@
   - [Setup](#setup)
   - [Install](#install)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -123,6 +124,12 @@ The deployment of the project will depend on your needs and the implementation p
 - GitHub: [@githubhandle](https://github.com/78fatemanazari)
 - Twitter: [@twitterhandle](https://twitter.com/fati_nazari78?s=31)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/78fatemanazari)
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- **Add animation for the project**
+- **Add the editing functionality**
+- **Add the test for the project**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
