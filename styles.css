@@ -73,7 +73,7 @@ button {
 
 .list-section {
   font-family: 'Comic Neue', cursive;
-  border: 3px solid black;;
+  border: 3px solid black;
 }
 
 .list-section li {
@@ -141,7 +141,9 @@ button {
   font-size: 29px;
 }
 
-
+.hidden {
+  display: none;
+}
 
 footer {
   display: flex;

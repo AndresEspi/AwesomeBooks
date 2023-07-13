@@ -125,3 +125,10 @@ function obtenerSufijoDia(dia) {
 // Actualizar la fecha y hora cada segundo
 setInterval(mostrarFechaHora, 1000);
 
+function mostrarSeccion(seccionId) {
+  var secciones = document.getElementsByClassName('section');
+  for (var i = 0; i < secciones.length; i++) {
+    secciones[i].classList.add('hidden');
+  }
+  document.getElementById(seccionId).classList.remove('hidden');
+}
