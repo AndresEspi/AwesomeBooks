@@ -77,3 +77,58 @@ class BookCollection {
 }
 
 new BookCollection();
+
+function mostrarFechaHora() {
+  var fechaHora = new Date();
+  
+  // Obtener el día del mes
+  var dia = fechaHora.getDate();
+  var sufijoDia = obtenerSufijoDia(dia);
+
+  // Obtener el mes
+  var mes = fechaHora.toLocaleString('default', { month: 'long' });
+
+  // Obtener el año
+  var anio = fechaHora.getFullYear();
+
+  // Obtener la hora, minutos y segundos
+  var hora = fechaHora.getHours();
+  var minutos = fechaHora.getMinutes();
+  var segundos = fechaHora.getSeconds();
+
+  // Formatear la hora
+  var sufijoHora = (hora < 12) ? 'am' : 'pm';
+  hora = (hora % 12 === 0) ? 12 : hora % 12;
+
+  // Convertir minutos a cadena y rellenar con ceros a la izquierda
+  minutos = minutos.toString().padStart(2, '0');
+
+  // Construir el mensaje
+  var mensaje = mes + " " + dia + sufijoDia + " " + anio + ", " + hora + ":" + minutos + ":" + segundos + " " + sufijoHora;
+
+  document.getElementById("fecha-hora").textContent = mensaje;
+}
+
+// Función para obtener el sufijo del día
+function obtenerSufijoDia(dia) {
+  if (dia === 1 || dia === 21 || dia === 31) {
+    return "st";
+  } else if (dia === 2 || dia === 22) {
+    return "nd";
+  } else if (dia === 3 || dia === 23) {
+    return "rd";
+  } else {
+    return "th";
+  }
+}
+
+// Actualizar la fecha y hora cada segundo
+setInterval(mostrarFechaHora, 1000);
+
+function mostrarSeccion(seccionId) {
+  var secciones = document.getElementsByClassName('section');
+  for (var i = 0; i < secciones.length; i++) {
+    secciones[i].classList.add('hidden');
+  }
+  document.getElementById(seccionId).classList.remove('hidden');
+}
